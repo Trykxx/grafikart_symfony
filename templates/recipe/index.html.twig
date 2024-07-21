@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Toutes les recettes
+{% endblock %}
+
+{% block body %}
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente id eveniet saepe dicta eos? Nemo, reprehenderit quisquam, similique necessitatibus ducimus hic obcaecati voluptatem vitae, culpa quam quia illo cum harum.</p>
+
+	<ul>
+		{% for recipe in recipes %}
+			<li>
+				<a href="{{path("recipe.show",{id: recipe.id, slug: recipe.slug})}}">{{recipe.title}}</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
